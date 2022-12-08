@@ -2,7 +2,26 @@ import "../scss/app.scss";
 
 window.addEventListener("DOMContentLoaded", () => {
   // This block will be executed once the page is loaded and ready
+  var count = 0;
 
+  document.body.addEventListener("click", ()=>{
+    const lenght = 5;
+
+    for(let i = 0; i<lenght; i++){
+      let x = document.createElement("article");
+      count+=lenght;
+
+      x.setAttribute("id", "myArticle" + count);
+      document.body.appendChild(x);
+
+      let text = "some text.."+count;
+
+      document.getElementById("myArticle"+count).innerHTML = text;
+      document
+      .getElementById("myArticle"+count)
+      .classList.add("message");
+    }
+  });
   const button = document.querySelector(".button");
   button.addEventListener("click", () => {
     alert("💣");
