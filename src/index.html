@@ -12,16 +12,15 @@
   <body>
     <div class="main">
       <div class="emoji mb-6">💣🤯💥</div>
-      <article class="message" id="myArticle">Some text here</article>
-      <article class="message" id="myArticle">More text here</article>
-      <article class="message" id="myArticle">Some text here again</article>
-      <article class="message" id="myArticle">la la la</article>
-      <article class="message" id="myArticle">Lorem ipsum</article>
-      <script>
-      document.getElementById("message").innerHTML;
-      </script>
-      <button class="button">Boom?</button>
-      <script src=".app.js"></script>
+    <div id="innerdiv"></div>
+    <button class="button" id="mybutton">Boom?</button>
+    <script>
+        document.getElementById("mybutton").
+            addEventListener("click", function () {
+         document.getElementById("innerdiv").
+            innerHTML += "<h3>Hello geeks</h3>";
+        });
+    </script>
     </div>
   </body>
 </html>
